@@ -16,6 +16,8 @@ import {
 
 import Axios from 'axios'
 
+const SERVER_DOMAIN = 'http://140.238.9.170:8080/'
+
 interface BoardITF {
   onChangeItem : (item : BoardItem) => void
 }
@@ -54,7 +56,7 @@ const BoardInputForm = (props : BoardITF) => {
     query.push(name);
     query.push(message);
 
-    Axios.post('http://127.0.0.1:8080/insert', JSON.stringify(query)).then(function (response) {
+    Axios.post(SERVER_DOMAIN + 'insert', JSON.stringify(query)).then(function (response) {
       console.log(response.data);
       onInsertFinish({row_num: response.data, writer: name, comment: message, write_date: new Date().getTime()});
     }).catch(function (err) {
@@ -99,7 +101,7 @@ const Board = () => {
   const [boardList, setBoardList] = useState<BoardItem[]>([]);
 
   useEffect(() => {
-    Axios.post('http://127.0.0.1:8080/select').then(function (response) {
+    Axios.post(SERVER_DOMAIN + 'select').then(function (response) {
       console.log(response.data);
       setBoardList(response.data);
     }).catch(function (err) {
