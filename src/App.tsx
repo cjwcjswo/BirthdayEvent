@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 import './App.css';
 import penguin from './image/penguin.png';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Story_1 } from './story/Story_1';
+import { Story_921103 } from './story/Story_921103';
+import { Story_0261101122 } from './story/Story_0261101122';
 
 import {
   Button,
@@ -220,6 +222,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Title />}></Route>
           <Route path="/1" element={<Story_1 />}></Route>
+          <Route path="/921103" element={<Story_921103 />}></Route>
+          <Route path="/0261101122" element={<Story_0261101122 />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
