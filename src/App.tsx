@@ -7,6 +7,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Story_1 } from './story/Story_1';
 import { Story_921103 } from './story/Story_921103';
 import { Story_0261101122 } from './story/Story_0261101122';
+import { Story_1130 } from './story/Story_1130';
+import { Story_12 } from './story/Story_12';
+import { Story_20210828 } from './story/Story_20210828';
+import { Story_1712763 } from './story/Story_1712763';
+import { Story_X } from './story/Story_X';
 
 import {
   Button,
@@ -224,6 +229,11 @@ function App() {
           <Route path="/1" element={<Story_1 />}></Route>
           <Route path="/921103" element={<Story_921103 />}></Route>
           <Route path="/0261101122" element={<Story_0261101122 />}></Route>
+          <Route path="/1130" element={<Story_1130 />}></Route>
+          <Route path="/12" element={<Story_12 />}></Route>
+          <Route path="/20210828" element={<Story_20210828 />}></Route>
+          <Route path="/1712763" element={<Story_1712763 />}></Route>
+          <Route path="*" element={<Story_X />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
